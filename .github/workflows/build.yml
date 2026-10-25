@@ -67,6 +67,8 @@ jobs:
           file: ./upstream/Dockerfile.gpu
           platforms: linux/amd64
           push: true
+          build-args: |
+            ONNXRUNTIME_GPU_VERSION===1.24.2
           tags: |
-            ${{ steps.meta.outputs.image }}:${{ steps.meta.outputs.version }}-gpu
-            ${{ steps.meta.outputs.image }}:sha-${{ steps.meta.outputs.sha }}
+            ${{ steps.meta.outputs.image }}:${{ steps.meta.outputs.version }}-gpu-r1
+            ${{ steps.meta.outputs.image }}:sha-${{ steps.meta.outputs.sha }}-r1
