@@ -68,7 +68,7 @@ jobs:
           platforms: linux/amd64
           push: true
           build-args: |
-            ONNXRUNTIME_GPU_VERSION===1.24.2
+            ONNXRUNTIME_GPU_VERSION===1.24.4
           tags: |
             ${{ steps.meta.outputs.image }}:${{ steps.meta.outputs.version }}-gpu-r1
             ${{ steps.meta.outputs.image }}:sha-${{ steps.meta.outputs.sha }}-r1
